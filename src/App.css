@@ -61,12 +61,14 @@ span.emoji {
   background-color: darkslategrey;
   color: black;
   border-radius: 8px;
-  width: 300px;
-  height: 150px;
+  width: 200px;
+  height: 40px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   font-size: 24px;
-  font-weight: bold; 
+  font-weight: bold;
+  padding: 70px;
+  text-align: center;
 }
 
 .game-piece:hover {
