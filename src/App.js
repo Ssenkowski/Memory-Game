@@ -3,6 +3,7 @@ import './App.css';
 import PlayButton from './welcome-menu/PlayButton';
 import Bible from './pictures/Bible';
 import Welcome from './welcome-menu/Welcome';
+import Piece from './gameboard/Piece';
 
 
 function handleClick(e){
@@ -17,6 +18,7 @@ function App() {
         <Bible />
         <Welcome />
         <PlayButton />
+        <Piece />
       </header>
     </div>
   );

@@ -1,17 +1,14 @@
 import React from 'react';
 
 function flipPiece(e) {
-	e.preventDefault();
-	console.log('The link was clicked')
+  e.preventDefault();
+  e = document.querySelector('.game-piece')
+  e.style.backgroundColor = "aliceblue";
 }
 
 export const Piece = () =>  (
-  <div> 
-		<button 
-	    onClick={flipPiece}
-        className="game-piece"
-        id=""
-        > Isaiah 35:10 </button>
+  <div className="live-board">
+    <div onClick={flipPiece} className="game-piece"> </div>
   </div>
 );
 
