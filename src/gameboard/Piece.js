@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react'
+import axios from 'axios'
 
 function flipPiece(e) {
   e.preventDefault();
   e = document.querySelector('.game-piece')
   e.style.backgroundColor = "aliceblue";
-  e.innerHTML = "Isaiah 35:10"
-}
+  }
 
-export const Piece = () =>  (
+class Pieces extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      pieces: []
+    }
+  }
+
+  getPieces() {
+    axios.get('/api/v1/cards')
+    .then(response => {
+      this.setState({pieces: response.data})
+    })
+    .catch(error => console.log(error))
+  }
+
+  componentDidMount() {
+    this.getPieces()
+  }
+
+  render() {
+    console.log(this.state)
+    return(
   <div className="live-board">
-    <div onClick={flipPiece} className="game-piece" > </div>
-  </div>
-);
+    <div onClick={flipPiece} className="game-piece" >
+    <p> {this.state.text} </p>  
+     </div>
+  </div>)
+};}
 
-export default Piece;
+export default Pieces;
