@@ -32,7 +32,6 @@ class Pieces extends Component {
     return(
   <div className="live-board">
     <div onClick={flipPiece} className="game-piece" >
-    <p> {this.state.text} </p>  
      </div>
   </div>)
 };}
