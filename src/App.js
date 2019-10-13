@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import PlayButton from './welcome-menu/PlayButton';
 import Bible from './pictures/Bible';
-import Welcome from './welcome-menu/Welcome';
-import Board from './gameboard/Board';
+import Header from './components/Header';
+import Main from './components/Main';
+
 
 
 function handleClick(e){
@@ -15,11 +15,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Header />
+        <Main />
         <Bible />
-        <Welcome />
-        <PlayButton />
-        <Board />
-      </header>
+       </header>
     </div>
   );
 }

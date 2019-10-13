@@ -12,7 +12,10 @@ class Board extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pieces: []
+      pieces: [],
+      match: false,
+      notAMatch: false
+
     }
   }
 
@@ -29,9 +32,8 @@ class Board extends Component {
   }
 
     render() {
-      console.log(this.state)
         return (
-        <Piece pieces={this.state.pieces} />
+        <Piece pieces={this.state.pieces} match={this.state.match} notAMatch={this.state.notAMatch} />
         /*Pass prop notaMatch or match! to <Piece/>.  if notaMatch
         reset piece to isFlipped: false else  add points to scoreboard 
           */
