@@ -4,12 +4,10 @@ import Bible from './pictures/Bible';
 import Header from './components/Header';
 import Main from './components/Main';
 
-
-
-function handleClick(e){
-  e.preventDefault();
- console.log('The button was clicked')
-}
+// function handleClick(e){
+//   e.preventDefault();
+//  console.log('The button was clicked')
+// }
 
 function App() {
   return (

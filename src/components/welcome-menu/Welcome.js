@@ -1,5 +1,4 @@
 import React from 'react';
-import PlayButton from './PlayButton'
 
 export const Welcome = () => (
 <p>

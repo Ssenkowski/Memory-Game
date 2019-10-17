@@ -1,13 +1,26 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+// import Button from '../containers/welcome-menu/Button';
+// import ScoreboardButton from '../containers/welcome-menu/ScoreboardButton';
+
+
+// function play(e) {
+// 	e.preventDefault();
+//     e = document.querySelector('.play-button').innerHTML = "Play"
+// }
+
+// function scoreboard(e) {
+// 	e.preventDefault();
+//     e = document.querySelector('.score-button').innerHTML = "Scoreboard"
+// }
 
 const Header = () => {
     return (
         <div>
             <nav>
-                <li><Link to='/'>Welcome</Link></li>
-                <li><Link to='/game'>Play</Link></li>
-                <li><Link to='/scoreboard'>Score Board</Link></li>
+                <Link to='/game'>Play</Link>
+                <br></br>
+                <Link to='/scoreboard'>Scoreboard</Link>
             </nav>
         </div>
     )
