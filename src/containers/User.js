@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
+import Profile from '../components/profile/Profile';
 import axios from 'axios';
-import Profile from '../components/profile/Profile'
 
 class User extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: []
+      profile: []
+      users: []
     }
   }
 
   getUser() {
     axios.get('/api/v1/users')
     .then(response => {
-      this.setState({user: response.data})
+      this.setState({users: response.data})
     })
     .catch(error => console.log(error))
   }
@@ -24,7 +25,7 @@ class User extends Component {
 
     render() {
         return (
-        <Profile /*onClick={flipPiece}*/ user={this.state.user} />
+        <Profile /*onClick={flipPiece}*/ users={this.state.users} />
         /*Pass prop notaMatch or match! to <Piece/>.  if notaMatch
         reset piece to isFlipped: false else  add points to scoreboard 
           */

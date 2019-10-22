@@ -1,13 +1,12 @@
 import React from 'react'
 
-const Profile = (props) => (
-  <div className="user-profile">
-      console.log(props)
-  {props.profile.map((profile) => 
-  <div key={profile.id} className="game-profile" alt={'unflipped'}>
-    <li> {profile.text} {profile.id} </li>
+const Profiles = (props) => (
+  <div className="profiles">
+  {props.profiles.map((profile) => 
+  <div key={profile.id} className="current-user">
+    <li> {profile.firstname} {profile.lastname} {profile.username} </li>
    </div>
    )}
 </div>);
 
-export default Profile;
+export default Profiles;
