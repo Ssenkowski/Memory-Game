@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import Bible from './pictures/Bible';
-import Header from './components/Header';
-import Main from './components/Main';
+import Navigation from './containers/Navigation';
 
 // function handleClick(e){
 //   e.preventDefault();
@@ -13,9 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
-        <Main />
-        <Bible />
+        <Navigation />
        </header>
     </div>
   );

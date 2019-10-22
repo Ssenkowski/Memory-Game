@@ -1,6 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 // import { functionDeclaration } from '@babel/types';
 
+
+const Pieces = (props) => (
+  <div className="live-board">
+  {props.pieces.map((piece) => 
+  <div key={piece.id} className="game-piece" alt={'unflipped'}>
+    <button> {piece.text} {piece.id} </button>
+   </div>
+   )}
+</div>);
+
+export default Pieces;
 // function flipPiece(e) {
 //   // e.preventDefault();
 //   e = document.querySelector('.game-piece')
@@ -16,15 +27,6 @@ import React, { Component } from 'react'
   //   e.style.backgroundColor = "darkslategrey";
   //   e.property.attribute = "";
   // }
-
-const Pieces = (props) => (
-  <div className="live-board">
-  {props.pieces.map((piece) => 
-  <div key={piece.id} className="game-piece" alt={'unflipped'}>
-    <button> {piece.text} {piece.id} </button>
-   </div>
-   )}
-</div>);
 
 // class Pieces extends Component {
 //   constructor(props){
@@ -51,4 +53,3 @@ const Pieces = (props) => (
 //       </div>)
 // };}
 
-export default Pieces;

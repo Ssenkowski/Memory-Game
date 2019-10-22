@@ -21,6 +21,8 @@ const Header = () => {
                 <Link to='/game'>Play</Link>
                 <br></br>
                 <Link to='/scoreboard'>Scoreboard</Link>
+                <br></br>
+                <Link to='/profile'>Profile</Link>
             </nav>
         </div>
     )

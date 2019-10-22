@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Piece from './Piece';
+import Piece from '../components/gameboard/Piece';
 import axios from 'axios';
 
 
