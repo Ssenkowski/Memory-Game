@@ -18,6 +18,8 @@ const Header = () => {
     return (
         <div>
             <nav>
+                <Link to='/user'>Create a User</Link>
+                <br></br>
                 <Link to='/game'>Play</Link>
                 <br></br>
                 <Link to='/scoreboard'>Scoreboard</Link>

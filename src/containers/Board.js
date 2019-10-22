@@ -65,7 +65,7 @@ Match() {
 
     render() {
         return (
-        <Piece /*onClick={flipPiece}*/ pieces={this.state.pieces} match={this.state.match} notAMatch={this.state.notAMatch} />
+        <Piece pieces={this.state.pieces} match={this.state.match} notAMatch={this.state.notAMatch} />
         /*Pass prop notaMatch or match! to <Piece/>.  if notaMatch
         reset piece to isFlipped: false else  add points to scoreboard 
           */

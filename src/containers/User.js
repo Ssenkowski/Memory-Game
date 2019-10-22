@@ -6,7 +6,6 @@ class User extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      profile: []
       users: []
     }
   }
@@ -25,15 +24,9 @@ class User extends Component {
 
     render() {
         return (
-        <Profile /*onClick={flipPiece}*/ users={this.state.users} />
-        /*Pass prop notaMatch or match! to <Piece/>.  if notaMatch
-        reset piece to isFlipped: false else  add points to scoreboard 
-          */
-        /* Need to replicate <Piece/> to make a 5x5 game board
-        with the different retrieved this.state.text results 
-        from Piece.js get request generated when the play button
-        is clicked.  They should be evenly spaced throughout the
-        visible window */
+          <div className="user-profiles">
+            <Profile users={this.state.users} />
+          </div>
       )
     };
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Profiles = (props) => (
-  <div className="profiles">
-  {props.profiles.map((profile) => 
-  <div key={profile.id} className="current-user">
-    <li> {profile.firstname} {profile.lastname} {profile.username} </li>
+  <div className="profile">
+  {props.users.map((user) => 
+  <div key={user.id} className="current-user">
+    <li> {user.firstname} {user.lastname} {user.username} </li>
    </div>
    )}
 </div>);
