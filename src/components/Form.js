@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import  axios from 'axios';
+import API from "../utils/API"
  
 class Form extends Component {
     constructor(){
@@ -34,16 +34,27 @@ class Form extends Component {
         event.preventDefault();
 
         const user = { 
-            firstName: this.state.firstName, 
-            lastName: this.state.lastName, 
-            userName: this.state.userName
+            firstname: this.state.firstName, 
+            lastname: this.state.lastName, 
+            username: this.state.userName
         };
+        
+        // fetch('https://localhost:3001/user', {
+        //     method: 'POST',
+        //     headers: {
 
-        axios.post('/api/v1/users',  {user})
-            .then(response => {
-                console.log(response);
-                console.log(response.data);
-            }) 
+        //     },
+        //     mode: "cors",
+        //     body: JSON.stringify(user)
+        // }).then(response => console.log(response))
+        // .catch(error => console.log(error))
+
+            
+         API.post(`/users`,  {user, headers:'Access-Control-Allow-Origin'})
+             .then(response => {
+                 console.log(response);
+                 console.log(response.data);
+             }).catch((err) => { console.log('Axios error:', err);})
         }
 
   render() {
